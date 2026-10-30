@@ -2061,8 +2061,8 @@ ChikoritaEvosAttacks:
 	db 1, TACKLE
 	db 1, GROWL
 	db 8, RAZOR_LEAF
-	db 12, REFLECT
-	db 15, POISONPOWDER
+	db 12, LEECH_SEED
+	db 15, REFLECT
 	db 22, SYNTHESIS
 	db 29, BODY_SLAM
 	db 36, LIGHT_SCREEN
@@ -2078,10 +2078,11 @@ BayleefEvosAttacks:
 	db 1, RAZOR_LEAF
 	db 1, REFLECT
 	db 8, RAZOR_LEAF
-	db 12, REFLECT
-	db 15, POISONPOWDER
+	db 12, LEECH_SEED
+	db 15, REFLECT
 	db 23, SYNTHESIS
 	db 31, BODY_SLAM
+	db 36, ANCIENTPOWER
 	db 39, LIGHT_SCREEN
 	db 47, SAFEGUARD
 	db 55, SOLARBEAM
@@ -2094,8 +2095,8 @@ MeganiumEvosAttacks:
 	db 1, RAZOR_LEAF
 	db 1, REFLECT
 	db 8, RAZOR_LEAF
-	db 12, REFLECT
-	db 15, POISONPOWDER
+	db 12, LEECH_SEED
+	db 15, REFLECT
 	db 23, SYNTHESIS
 	db 31, BODY_SLAM
 	db 41, LIGHT_SCREEN
@@ -2866,10 +2867,9 @@ HeracrossEvosAttacks:
 	db 6, HORN_ATTACK
 	db 12, ENDURE
 	db 19, FURY_ATTACK
-	db 27, COUNTER
+	db 27, MEGAHORN
 	db 35, TAKE_DOWN
-	db 44, REVERSAL
-	db 54, MEGAHORN
+	db 44, CROSS_CHOP
 	db 0 ; no more level-up moves
 
 SneaselEvosAttacks:
