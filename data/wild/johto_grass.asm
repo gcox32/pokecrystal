@@ -303,11 +303,11 @@ JohtoGrassWildMons:
 	; nite
 	db 13, RATTATA
 	db 14, KOFFING
-	db 15, RATTATA
+	db 15, GASTLY
 	db 14, ZUBAT
-	db 15, RATTATA
-	db 15, RATICATE
-	db 15, RATICATE
+	db 15, MISDREAVUS
+	db 17, MISDREAVUS
+	db 18, GASTLY
 	end_grass_wildmons
 
 	def_grass_wildmons BURNED_TOWER_B1F
@@ -329,12 +329,12 @@ JohtoGrassWildMons:
 	db 16, KOFFING
 	db 16, WEEZING
 	; nite
-	db 14, RATTATA
-	db 14, KOFFING
-	db 16, KOFFING
+	db 14, ZUBAT
+	db 14, GASTLY
+	db 16, GASTLY
 	db 15, ZUBAT
-	db 12, KOFFING
-	db 16, KOFFING
+	db 16, MISDREAVUS
+	db 18, MISDREAVUS
 	db 16, WEEZING
 	end_grass_wildmons
 
@@ -346,8 +346,8 @@ JohtoGrassWildMons:
 	db 14, LEDYBA
 	db 13, PIDGEY
 	db 10, CATERPIE
-	db 10, WEEDLE
-	db 10, WEEDLE
+	db 10, SUNKERN
+	db 12, SUNKERN
 	; day
 	db 12, NIDORAN_F
 	db 12, NIDORAN_M
@@ -1398,8 +1398,8 @@ JohtoGrassWildMons:
 	db 12, HOOTHOOT
 	db 10, ABRA
 	db 12, JIGGLYPUFF
-	db 10, DITTO
-	db 10, DITTO
+	db 10, HOUNDOUR
+	db 12, HOUNDOUR
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_35
@@ -1424,8 +1424,8 @@ JohtoGrassWildMons:
 	db 12, DROWZEE
 	db 14, HOOTHOOT
 	db 13, PSYDUCK
-	db 10, ABRA
-	db 12, JIGGLYPUFF
+	db 10, HOUNDOUR
+	db 12, HOUNDOUR
 	db 10, DITTO
 	db 12, YANMA
 	end_grass_wildmons
@@ -1479,7 +1479,7 @@ JohtoGrassWildMons:
 	; nite
 	db 13, SPINARAK
 	db 14, STANTLER
-	db 15, HOOTHOOT
+	db 15, MURKROW
 	db 16, STANTLER
 	db 15, NOCTOWL
 	db 15, ARIADOS
@@ -1509,8 +1509,8 @@ JohtoGrassWildMons:
 	db 16, RATICATE
 	db 16, MAGNEMITE
 	db 16, NOCTOWL
-	db 16, MEOWTH
-	db 16, MEOWTH
+	db 16, MURKROW
+	db 16, MURKROW
 	db 16, MEOWTH
 	end_grass_wildmons
 
@@ -1537,8 +1537,8 @@ JohtoGrassWildMons:
 	db 16, RATICATE
 	db 16, MAGNEMITE
 	db 16, NOCTOWL
-	db 18, MEOWTH
-	db 18, MEOWTH
+	db 18, MURKROW
+	db 18, MURKROW
 	db 18, MEOWTH
 	end_grass_wildmons
 
@@ -1629,29 +1629,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_45
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 23, GEODUDE
-	db 23, GRAVELER
-	db 24, GLIGAR
+	db 23, SLUGMA
+	db 23, GLIGAR
+	db 25, SLUGMA
 	db 25, DONPHAN
-	db 20, PHANPY
+	db 30, MAGMAR
 	db 27, SKARMORY
-	db 27, SKARMORY
+	db 27, LARVITAR
 	; day
-	db 23, GEODUDE
+	db 23, SLUGMA
 	db 23, GRAVELER
 	db 24, GLIGAR
-	db 25, DONPHAN
 	db 30, DONPHAN
+	db 25, MAGMAR
 	db 27, SKARMORY
-	db 27, SKARMORY
+	db 27, LARVITAR
 	; nite
-	db 23, GEODUDE
-	db 23, GRAVELER
+	db 23, TEDDIURSA
+	db 23, GLIGAR
 	db 24, GLIGAR
-	db 25, GRAVELER
+	db 25, MAGMAR
+	db 27, SKARMORY
 	db 27, GRAVELER
-	db 27, GRAVELER
-	db 27, GRAVELER
+	db 27, LARVITAR
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_46
@@ -1659,9 +1659,9 @@ JohtoGrassWildMons:
 	; morn
 	db 2, GEODUDE
 	db 2, SPEAROW
-	db 3, GEODUDE
-	db 3, RATTATA
 	db 2, PHANPY
+	db 3, PHANPY
+	db 4, PHANPY
 	db 2, RATTATA
 	db 2, RATTATA
 	; day
@@ -1670,14 +1670,14 @@ JohtoGrassWildMons:
 	db 3, GEODUDE
 	db 3, RATTATA
 	db 2, RATTATA
-	db 2, RATTATA
-	db 2, RATTATA
+	db 2, PHANPY
+	db 2, TEDDIURSA
 	; nite
 	db 2, GEODUDE
 	db 2, RATTATA
-	db 3, GEODUDE
-	db 3, RATTATA
-	db 2, RATTATA
+	db 2, TEDDIURSA
+	db 3, TEDDIURSA
+	db 4, TEDDIURSA
 	db 2, RATTATA
 	db 2, RATTATA
 	end_grass_wildmons

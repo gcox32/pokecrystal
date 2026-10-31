@@ -3082,11 +3082,11 @@ PhanpyEvosAttacks:
 	db 1, TACKLE
 	db 1, GROWL
 	db 9, DEFENSE_CURL
-	db 17, FLAIL
+	db 12, ROLLOUT
+	db 15, WATER_GUN
 	db 25, TAKE_DOWN
-	db 33, ROLLOUT
-	db 41, ENDURE
-	db 49, DOUBLE_EDGE
+	db 33, HEADBUTT
+	db 41, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 DonphanEvosAttacks:
@@ -3094,11 +3094,12 @@ DonphanEvosAttacks:
 	db 1, HORN_ATTACK
 	db 1, GROWL
 	db 9, DEFENSE_CURL
-	db 17, FLAIL
+	db 12, ROLLOUT
+	db 15, WATER_GUN
 	db 25, FURY_ATTACK
-	db 33, ROLLOUT
-	db 41, RAPID_SPIN
-	db 49, EARTHQUAKE
+	db 33, RAPID_SPIN
+	db 41, EARTHQUAKE
+	db 49, ANCIENTPOWER
 	db 0 ; no more level-up moves
 
 Porygon2EvosAttacks:
@@ -3155,10 +3156,10 @@ HitmontopEvosAttacks:
 	db 13, PURSUIT
 	db 19, QUICK_ATTACK
 	db 25, RAPID_SPIN
-	db 31, COUNTER
+	db 31, TRIPLE_KICK
 	db 37, AGILITY
-	db 43, DETECT
-	db 49, TRIPLE_KICK
+	db 43, COUNTER
+	db 49, REVERSAL
 	db 0 ; no more level-up moves
 
 SmoochumEvosAttacks:
@@ -3210,10 +3211,9 @@ MiltankEvosAttacks:
 	db 8, DEFENSE_CURL
 	db 13, STOMP
 	db 19, MILK_DRINK
-	db 26, BIDE
+	db 26, HEAL_BELL
 	db 34, ROLLOUT
 	db 43, BODY_SLAM
-	db 53, HEAL_BELL
 	db 0 ; no more level-up moves
 
 BlisseyEvosAttacks:
