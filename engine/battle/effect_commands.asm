@@ -4749,7 +4749,7 @@ BattleCommand_Curl:
 	ld a, BATTLE_VARS_SUBSTATUS2
 	call GetBattleVarAddr
 	set SUBSTATUS_CURLED, [hl]
-	ret
+	jp ResetMiss
 
 BattleCommand_RaiseSubNoAnim:
 	ld hl, GetBattleMonBackpic

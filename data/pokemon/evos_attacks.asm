@@ -190,7 +190,7 @@ ButterfreeEvosAttacks:
 	db 18, SUPERSONIC
 	db 23, WHIRLWIND
 	db 28, GUST
-	db 34, PSYBEAM
+	db 34, SILVER_WIND
 	db 40, SAFEGUARD
 	db 0 ; no more level-up moves
 
@@ -834,7 +834,7 @@ AbraEvosAttacks:
 	db 0 ; no more level-up moves
 
 KadabraEvosAttacks:
-	db EVOLVE_TRADE, -1, ALAKAZAM
+	db EVOLVE_LEVEL, 37, ALAKAZAM
 	db 0 ; no more evolutions
 	db 1, TELEPORT
 	db 1, KINESIS
@@ -878,7 +878,7 @@ MachopEvosAttacks:
 	db 0 ; no more level-up moves
 
 MachokeEvosAttacks:
-	db EVOLVE_TRADE, -1, MACHAMP
+	db EVOLVE_LEVEL, 37, MACHAMP
 	db 0 ; no more evolutions
 	db 1, LOW_KICK
 	db 1, LEER
@@ -992,7 +992,7 @@ GeodudeEvosAttacks:
 	db 0 ; no more level-up moves
 
 GravelerEvosAttacks:
-	db EVOLVE_TRADE, -1, GOLEM
+	db EVOLVE_LEVEL, 37, GOLEM
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DEFENSE_CURL
@@ -1246,7 +1246,7 @@ GastlyEvosAttacks:
 	db 0 ; no more level-up moves
 
 HaunterEvosAttacks:
-	db EVOLVE_TRADE, -1, GENGAR
+	db EVOLVE_LEVEL, 37, GENGAR
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
 	db 1, LICK
@@ -1551,7 +1551,7 @@ TangelaEvosAttacks:
 	db 4, SLEEP_POWDER
 	db 10, ABSORB
 	db 13, POISONPOWDER
-	db 19, VINE_WHIP
+	db 19, LEECH_SEED
 	db 25, BIND
 	db 31, MEGA_DRAIN
 	db 34, STUN_SPORE
@@ -2251,7 +2251,7 @@ LedybaEvosAttacks:
 	db 15, COMET_PUNCH
 	db 22, LIGHT_SCREEN
 	db 22, REFLECT
-	db 22, SAFEGUARD
+	db 22, SILVER_WIND
 	db 29, BATON_PASS
 	db 36, SWIFT
 	db 43, AGILITY
@@ -2266,7 +2266,7 @@ LedianEvosAttacks:
 	db 15, COMET_PUNCH
 	db 24, LIGHT_SCREEN
 	db 24, REFLECT
-	db 24, SAFEGUARD
+	db 24, SILVER_WIND
 	db 33, BATON_PASS
 	db 42, SWIFT
 	db 51, AGILITY
@@ -2466,8 +2466,11 @@ BellossomEvosAttacks:
 	db 1, ABSORB
 	db 1, SWEET_SCENT
 	db 1, STUN_SPORE
-	db 1, PETAL_DANCE
-	db 55, SOLARBEAM
+	db 28, PETAL_DANCE
+	db 32, SWEET_SCENT
+	db 36, SUNNY_DAY
+	db 40, MORNING_SUN
+	db 45, SOLARBEAM
 	db 0 ; no more level-up moves
 
 MarillEvosAttacks:
@@ -2611,7 +2614,7 @@ YanmaEvosAttacks:
 	db 13, DOUBLE_TEAM
 	db 19, SONICBOOM
 	db 25, DETECT
-	db 31, SUPERSONIC
+	db 31, ANCIENTPOWER
 	db 37, WING_ATTACK
 	db 43, SCREECH
 	db 0 ; no more level-up moves
@@ -2739,7 +2742,7 @@ PinecoEvosAttacks:
 	db 8, SELFDESTRUCT
 	db 15, TAKE_DOWN
 	db 22, RAPID_SPIN
-	db 29, BIDE
+	db 29, PIN_MISSILE
 	db 36, EXPLOSION
 	db 43, SPIKES
 	db 50, DOUBLE_EDGE
@@ -2753,7 +2756,7 @@ ForretressEvosAttacks:
 	db 8, SELFDESTRUCT
 	db 15, TAKE_DOWN
 	db 22, RAPID_SPIN
-	db 29, BIDE
+	db 29, PIN_MISSILE
 	db 39, EXPLOSION
 	db 49, SPIKES
 	db 59, DOUBLE_EDGE
@@ -2767,7 +2770,7 @@ DunsparceEvosAttacks:
 	db 18, SPITE
 	db 26, PURSUIT
 	db 30, SCREECH
-	db 38, TAKE_DOWN
+	db 38, ANCIENTPOWER
 	db 0 ; no more level-up moves
 
 GligarEvosAttacks:

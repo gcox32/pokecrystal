@@ -2070,10 +2070,13 @@ DefenseCurl:
 	usedmovetext
 	doturn
 	defenseup
-	curl
 	lowersub
 	statupanim
 	raisesub
+	statupmessage
+	statupfailtext
+	curl ; also resets wAttackMissed so speedup isn't blocked by a maxed Defense
+	speedup
 	statupmessage
 	statupfailtext
 	endmove

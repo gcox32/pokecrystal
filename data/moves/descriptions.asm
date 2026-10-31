@@ -707,8 +707,8 @@ WithdrawDescription:
 	next "user's DEFENSE.@"
 
 DefenseCurlDescription:
-	db   "Heightens the"
-	next "user's DEFENSE.@"
+	db   "Raises the user's"
+	next "DEFENSE & SPEED.@"
 
 BarrierDescription:
 	db   "Sharply increases"
