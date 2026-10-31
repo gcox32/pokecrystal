@@ -22,7 +22,7 @@ TreeMonSet_None:
 TreeMonSet_Canyon:
 ; common
 	db 50, SPEAROW,    10
-	db 15, SPEAROW,    10
+	db 15, HERACROSS,  10
 	db 15, SPEAROW,    10
 	db 10, AIPOM,      10
 	db  5, AIPOM,      10
@@ -41,7 +41,7 @@ TreeMonSet_Town:
 ; common
 	db 50, SPEAROW,    10
 	db 15, EKANS,      10
-	db 15, SPEAROW,    10
+	db 15, HERACROSS,  10
 	db 10, AIPOM,      10
 	db  5, AIPOM,      10
 	db  5, AIPOM,      10
@@ -114,7 +114,7 @@ TreeMonSet_Forest:
 	db 50, HOOTHOOT,   10
 	db 15, PINECO,     10
 	db 15, PINECO,     10
-	db 10, NOCTOWL,    10
+	db 10, HERACROSS,  10
 	db  5, BUTTERFREE, 10
 	db  5, BEEDRILL,   10
 	db -1
