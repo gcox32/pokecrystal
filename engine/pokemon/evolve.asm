@@ -87,6 +87,9 @@ EvolveAfterBattle_MasterLoop:
 	cp EVOLVE_HAPPINESS
 	jr z, .happiness
 
+	cp EVOLVE_HOLD
+	jp z, .hold
+
 ; EVOLVE_STAT
 	ld a, [wTempMonLevel]
 	cp [hl]
@@ -113,7 +116,7 @@ EvolveAfterBattle_MasterLoop:
 	jp nz, .dont_evolve_2
 
 	inc hl
-	jr .proceed
+	jp .proceed
 
 .happiness
 	ld a, [wTempMonHappiness]
@@ -158,6 +161,17 @@ EvolveAfterBattle_MasterLoop:
 	cp LINK_TIMECAPSULE
 	jp z, .dont_evolve_3
 
+	ld a, [wTempMonItem]
+	cp b
+	jp nz, .dont_evolve_3
+
+	xor a
+	ld [wTempMonItem], a
+	jr .proceed
+
+.hold
+	ld a, [hli]
+	ld b, a
 	ld a, [wTempMonItem]
 	cp b
 	jp nz, .dont_evolve_3
