@@ -2849,8 +2849,8 @@ ScizorEvosAttacks:
 	db 24, AGILITY
 	db 30, METAL_CLAW
 	db 36, BATON_PASS
-	db 42, SWORDS_DANCE
-	db 48, SILVER_WIND
+	db 42, SILVER_WIND
+	db 48, SWORDS_DANCE
 	db 0 ; no more level-up moves
 
 ShuckleEvosAttacks:
@@ -2859,9 +2859,9 @@ ShuckleEvosAttacks:
 	db 1, WITHDRAW
 	db 9, WRAP
 	db 14, ENCORE
-	db 23, SAFEGUARD
-	db 28, BIDE
-	db 37, REST
+	db 23, LEECH_SEED
+	db 28, TOXIC
+	db 37, RECOVER
 	db 0 ; no more level-up moves
 
 HeracrossEvosAttacks:
@@ -2872,8 +2872,9 @@ HeracrossEvosAttacks:
 	db 12, ENDURE
 	db 19, FURY_ATTACK
 	db 27, MEGAHORN
-	db 35, TAKE_DOWN
+	db 35, SWORDS_DANCE
 	db 44, CROSS_CHOP
+	db 49, ROCK_SLIDE
 	db 0 ; no more level-up moves
 
 SneaselEvosAttacks:
