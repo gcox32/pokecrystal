@@ -513,11 +513,18 @@ StartMenu_Pokemon:
 .menunoreload
 	farcall WritePartyMenuTilemap
 	farcall PlacePartyMenuText
+	farcall PlacePartyMenuFollowerInfo
 	call WaitBGMap
 	call SetDefaultBGPAndOBP
 	call DelayFrame
+	ld a, [wMenuJoypadFilter]
+	or PAD_SELECT
+	ld [wMenuJoypadFilter], a
 	farcall PartyMenuSelect
-	jr c, .return ; if cancelled or pressed B
+	jr c, .cancelled ; if cancelled or pressed B
+	ldh a, [hJoyLast]
+	bit B_PAD_SELECT, a
+	jr nz, .follow
 
 	call PokemonActionSubmenu
 	cp 3
@@ -528,6 +535,17 @@ StartMenu_Pokemon:
 	jr z, .menunoreload
 	cp 2
 	jr z, .quit
+	jr .return
+
+.cancelled
+	ldh a, [hJoyLast]
+	bit B_PAD_SELECT, a
+	jr nz, .menunoreload ; SELECT on CANCEL does nothing
+	jr .return
+
+.follow
+	farcall SetPartyMonAsFollower
+	jr .menunoreload
 
 .return
 	call CloseSubmenu

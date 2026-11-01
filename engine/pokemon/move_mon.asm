@@ -1220,6 +1220,10 @@ String_Egg:
 	db "EGG@"
 
 RemoveMonFromPartyOrBox:
+	ld a, [wPokemonWithdrawDepositParameter]
+	and a
+	call z, .UpdateFollowerChoice
+
 	ld hl, wPartyCount
 
 	ld a, [wPokemonWithdrawDepositParameter]
@@ -1369,6 +1373,20 @@ RemoveMonFromPartyOrBox:
 	jr nz, .loop2
 .close_sram
 	jp CloseSRAM
+
+.UpdateFollowerChoice:
+; Keep the follower choice on the same mon after one leaves the party
+	ld hl, wFollowerChoice
+	ld a, [wCurPartyMon]
+	cp [hl]
+	jr z, .removed_follower
+	ret nc
+	dec [hl]
+	ret
+
+.removed_follower
+	ld [hl], 0
+	ret
 
 ComputeNPCTrademonStats:
 	ld a, MON_LEVEL

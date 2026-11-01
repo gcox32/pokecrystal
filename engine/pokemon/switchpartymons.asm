@@ -9,11 +9,30 @@ _SwitchPartyMons:
 	cp b
 	jr z, .skip
 	call .SwapMonAndMail
+	call .SwapFollowerChoice
 	ld a, [wSwitchMonFrom]
 	call .ClearSprite
 	ld a, [wSwitchMonTo]
 	call .ClearSprite
 .skip
+	ret
+
+.SwapFollowerChoice:
+; Keep the follower choice on the same mon after it changes slots
+	ld hl, wFollowerChoice
+	ld a, [wSwitchMonFrom]
+	cp [hl]
+	jr nz, .not_from
+	ld a, [wSwitchMonTo]
+	ld [hl], a
+	ret
+
+.not_from
+	ld a, [wSwitchMonTo]
+	cp [hl]
+	ret nz
+	ld a, [wSwitchMonFrom]
+	ld [hl], a
 	ret
 
 .ClearSprite:

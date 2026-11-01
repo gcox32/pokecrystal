@@ -263,11 +263,40 @@ GetFirstAliveMon::
 	ld a, [bc]
 	ret
 
+GetFollowerMon::
+; Returns the chosen follower's species in a; party number in d
+; Falls back to the first alive mon if the choice is missing, an egg, or fainted
+	ld a, [wFollowerChoice]
+	ld e, a
+	ld a, [wPartyCount]
+	cp e
+	jr z, GetFirstAliveMon
+	jr c, GetFirstAliveMon
+	ld d, 0
+	ld hl, wPartySpecies
+	add hl, de
+	ld a, [hl]
+	cp EGG
+	jr z, GetFirstAliveMon
+	ld a, e
+	ld hl, wPartyMon1HP
+	call GetPartyLocation
+	ld a, [hli]
+	or [hl]
+	jr z, GetFirstAliveMon
+	ld a, e
+	ld hl, wPartyMon1Species
+	call GetPartyLocation
+	ld d, e
+	inc d
+	ld a, [hl]
+	ret
+
 GetFollowingSprite:
 	cp SPRITE_FOLLOWER
 	jr nz, GetWalkingMonSprite.nope
 
-	call GetFirstAliveMon
+	call GetFollowerMon
 	ld [wFollowerSpriteID], a
 	push af
 	ld a, d
@@ -283,6 +312,7 @@ GetWalkingMonSprite:
 	cp (UNOWN - 1) ; we already decremented
 	jr nz, .not_unown
 	ld a, [wFollowerPartyNum]
+	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld hl, wPartyMon1DVs
 	call AddNTimes

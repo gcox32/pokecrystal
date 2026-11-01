@@ -3323,7 +3323,9 @@ wPartyMon{d:n}Nickname:: ds MON_NAME_LENGTH
 endr
 wPartyMonNicknamesEnd::
 
-	ds 22
+wFollowerChoice:: db ; party index of the chosen follower
+
+	ds 21
 
 wPokedexCaught:: flag_array NUM_POKEMON
 wEndPokedexCaught::
