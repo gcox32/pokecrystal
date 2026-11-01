@@ -487,7 +487,12 @@ endr
 	pop hl
 
 	push bc
+	; Request2bpp clobbers hl (and Get2bppViaHDMA clobbers de)
+	push hl
+	push de
 	call GetGFXUnlessMobile
+	pop de
+	pop hl
 	ld bc, 16 * 4
 	add hl, bc
 	push hl
