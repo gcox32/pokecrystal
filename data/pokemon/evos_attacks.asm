@@ -1673,13 +1673,13 @@ ScytherEvosAttacks:
 	db 1, QUICK_ATTACK
 	db 1, LEER
 	db 6, FOCUS_ENERGY
-	db 12, PURSUIT
+	db 12, DOUBLE_TEAM
 	db 18, FALSE_SWIPE
 	db 24, AGILITY
 	db 30, WING_ATTACK
 	db 36, SLASH
 	db 42, SWORDS_DANCE
-	db 48, DOUBLE_TEAM
+	db 48, SILVER_WIND
 	db 0 ; no more level-up moves
 
 JynxEvosAttacks:
@@ -2844,13 +2844,13 @@ ScizorEvosAttacks:
 	db 1, QUICK_ATTACK
 	db 1, LEER
 	db 6, FOCUS_ENERGY
-	db 12, PURSUIT
+	db 12, DOUBLE_TEAM
 	db 18, FALSE_SWIPE
 	db 24, AGILITY
 	db 30, METAL_CLAW
-	db 36, SLASH
+	db 36, BATON_PASS
 	db 42, SWORDS_DANCE
-	db 48, DOUBLE_TEAM
+	db 48, SILVER_WIND
 	db 0 ; no more level-up moves
 
 ShuckleEvosAttacks:
