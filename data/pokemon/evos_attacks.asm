@@ -2978,7 +2978,8 @@ CorsolaEvosAttacks:
 	db 1, TACKLE
 	db 7, HARDEN
 	db 13, BUBBLE
-	db 19, RECOVER
+	db 17, SPIKES
+	db 21, RECOVER
 	db 25, BUBBLEBEAM
 	db 31, SPIKE_CANNON
 	db 37, MIRROR_COAT
